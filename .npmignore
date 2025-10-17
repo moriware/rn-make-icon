@@ -1,0 +1,25 @@
+# Arquivos de desenvolvimento
+.eslintrc.js
+test-run.js
+TEST_REPORT.md
+tsconfig.json
+
+# Diretórios de exemplo e testes
+example/
+tests/
+assets/
+
+# Controle de versão e CI/CD
+.git/
+.circleci/
+.vscode/
+
+# Código-fonte TypeScript (já compilado em dist/)
+*.ts
+!*.d.ts
+
+# Manter apenas os arquivos compilados em dist/
+# Não incluir os arquivos fonte originais
+/lib
+/utils
+/index.ts
