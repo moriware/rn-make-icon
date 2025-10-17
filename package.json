@@ -1,6 +1,6 @@
 {
   "name": "@moriware/rn-make-icon",
-  "version": "1.2.8",
+  "version": "1.2.9",
   "description": "Gerador de ícones para Android e iOS voltado a projetos React Native",
   "main": "dist/index.js",
   "bin": {
@@ -58,5 +58,8 @@
     "semver": "^7.3.7",
     "sharp": "^0.33.5",
     "strip-ansi": "^6.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
