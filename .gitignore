@@ -3,3 +3,5 @@ tests/**/output
 coverage
 AppTestName
 dist
+
+.npmrc

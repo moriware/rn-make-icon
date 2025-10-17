@@ -23,3 +23,5 @@ assets/
 /lib
 /utils
 /index.ts
+
+.npmrc
