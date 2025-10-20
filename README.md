@@ -9,28 +9,19 @@ Gerador de ícones para Android e iOS focado em projetos React Native
 </p>
 </header>
 
-<h2>⚡️ Quick Start</h2>
+<h2>⚡️ Início Rápido</h2>
 
 Você pode executar o gerador de ícones com o comando npx (disponível a partir do Node.js 8.2.0).
 
 ```bash
 $ npx @moriware/rn-make-icon gerar ./caminho/para/icon.png
+# Alias em inglês
+$ npx @moriware/rn-make-icon create ./caminho/para/icon.png
 ```
 
 Para versões anteriores do Node, consulte a seção [🚀 Instalação](#-instalação).
 
-<h2>🚀 Installation</h2>
-
-> **Requisito de versão do Node**
-> @moriware/rn-make-icon exige Node.js 14.0 ou superior (v16+ recomendado). Use gerenciadores como [n](https://github.com/tj/n), [nvm](https://github.com/creationix/nvm) ou [nvm-windows](https://github.com/coreybutler/nvm-windows) para alternar versões rapidamente.
-
-```bash
-$ npx @moriware/rn-make-icon gerar ./caminho/para/icon.png
-```
-
-Para versões anteriores do Node, consulte a seção [🚀 Instalação](#-instalação).
-
-<h2>🚀 Installation</h2>
+<h2>🚀 Instalação</h2>
 
 > **Requisito de versão do Node**
 >
@@ -46,15 +37,7 @@ $ npm install -g @moriware/rn-make-icon
 $ yarn global add @moriware/rn-make-icon
 ```
 
-Para instalar o pacote **globalmente**, execute um dos comandos abaixo (talvez seja necessário sudo/admin caso o Node não tenha sido instalado via n/nvm):
-
-```bash
-$ npm install -g @moriware/rn-make-icon
-# OU
-$ yarn global add @moriware/rn-make-icon
-```
-
-Após a instalação, o binário `rn-make-icon` ficará disponível no terminal. Teste executando `rn-make-icon` para visualizar o menu de ajuda.
+Após a instalação, o binário `rn-make-icon` ficará disponível no terminal. Teste executando `rn-make-icon --help` para visualizar o menu de ajuda.
 
 Confira a versão instalada com:
 
@@ -85,6 +68,8 @@ A forma mais simples de usar o [`rn-make-icon`][1] é chamar o comando `rn-make-
 $ rn-make-icon gerar ./icon.png
 ```
 
+Se preferir, utilize o alias em inglês `rn-make-icon create ./icon.png` — o comportamento é idêntico.
+
 Se instalou como dependência de desenvolvimento, adicione um script no `package.json` e execute com `npm run create-appicon`:
 
 ```json5
@@ -97,7 +82,18 @@ Se instalou como dependência de desenvolvimento, adicione um script no `package
 
 O utilitário gera automaticamente os ícones nas dimensões corretas para Android e iOS.
 
+Quando precisar desfazer mudanças, execute `rn-make-icon remover` (ou o alias em inglês `rn-make-icon remove`) para limpar os ícones criados.
+
 <h2>⚙️ Configuração</h2>
+
+<h3>Comandos disponíveis</h3>
+
+O binário `rn-make-icon` oferece os comandos abaixo. Cada comando possui um alias em inglês para manter compatibilidade com quem prefere essa nomenclatura:
+
+- `gerar` (`create`) — Gera um novo conjunto de ícones para um projeto React Native.
+- `remover` (`remove`) — Remove um conjunto de ícones de um projeto React Native.
+
+Utilize `rn-make-icon <comando> --help` para visualizar as opções de cada comando ou alias.
 
 Existem duas formas principais de configurar o [`rn-make-icon`][1]:
 
@@ -114,6 +110,8 @@ $ rn-make-icon gerar --help
 Uso: rn-make-icon gerar [opções] [caminho-imagem]
 
 Gera um novo conjunto de ícones para um projeto React Native
+
+Aliases: create
 
 Opções:
   -d, --disable-launcher-icon                  Impede a troca do ícone principal no iOS e Android
@@ -163,3 +161,10 @@ As opções abaixo são utilizadas apenas durante a geração de ícones adaptat
 
 - `adaptiveIconBackground` — Cor (ex.: `"#ffffff"`) ou imagem (ex.: `"assets/images/fundo-claro.png"`) aplicada como fundo do ícone adaptativo.
 - `adaptiveIconForeground` — Imagem utilizada como camada frontal do ícone adaptativo.
+
+<h4>rn-make-icon remover</h4>
+
+O comando `remover` (alias `remove`) é útil para desfazer alterações rapidamente:
+
+- `android` — Remove os ícones da plataforma Android.
+- `ios` — Remove os ícones da plataforma iOS.
